@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sport Station - Categories</title>
+  <title>Top Sales - Sport Station</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -54,10 +54,15 @@
       font-weight: bold;
       font-size: 16px;
     }
-     .nav-links a:hover {
+ .nav-links a:hover {
     text-decoration: underline;
   }
-       .search-container {
+    .nav-links .top-sales {
+      color: rgb(135, 7, 7);
+      font-weight: bold;
+    }
+
+    .search-container {
         position: relative;
         margin-left: auto;
     }
@@ -90,33 +95,58 @@
     .page-title {
       text-align: center;
       margin: 30px 0 40px;
-      font-size: 28px;
-      letter-spacing: 1px;
-    }
-
-    /* GRID */
-    .grid-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      padding-bottom: 60px;
-    }
-
-    .grid-item {
-      text-align: center;
-    }
-
-    .grid-item img {
-      width: 250px;
-      height: 300px;
-      border-radius: 4px;
-    }
-
-    .grid-item h2 {
-      margin-top: 10px;
-      font-size: 20px;
+      font-size: 32px;
       font-weight: bold;
+    }
+
+    /* PRODUCT GRID */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      width: 80%;
+      margin: auto;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .card img {
+      height: 170px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #4169e1;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 3px;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #3354b8;
     }
 
     /* FOOTER */
@@ -161,9 +191,9 @@
         </div>
         <span class="site-title">Sport Station</span>
         <ul class="nav-links">
-          <li><a href="./1st.html" style="text-decoration: none;">Home</a></li>
-          <li><a href="#" style="color:rgb(135, 7, 7); font-weight:bold;">Categories</a></li>
-          <li><a href="./4th.html" style="text-decoration:none;">Top Sales</a></li>
+           <li><a href="./1st.html" style="text-decoration: none;">Home</a></li>
+          <li><a href="./3rd.html" style="text-decoration: none;">Categories</a></li>
+          <li><a href="#" class="top-sales">Top Sales</a></li>
            <li><a href="./9th.html" style="text-decoration:none;">Recommendation</a></li>
         </ul>
       </div>
@@ -175,57 +205,48 @@
 
       <div class="icons">
          <span><a href="./5th.html" style="text-decoration:none">🛒</a></span>
-       <span><a href="./2nd.html" style="text-decoration:none">👤</a></span>
+        <span><a href="./2nd.html" style="text-decoration:none">👤</a></span>
         <span>☰</span>
       </div>
     </nav>
   </header>
 
-  <!-- TITLE -->
-  <h1 class="page-title">PRODUCT CATEGORIES</h1>
+  <!-- PAGE TITLE -->
+  <h1 class="page-title">TOP SALES</h1>
 
-  <!-- GRID -->
-  <div class="grid-container">
-    <div class="grid-item">
-      <img src="https://via.placeholder.com/250x300?text=Basketball+Kit" />
-      <h2>BasketBall</h2>
+  <!-- PRODUCTS -->
+  <div class="products">
+
+    <div class="card">
+        <img src="https://i.imgur.com/k06yGeS.png" alt="Slog Bats">
+        <div class="title">Slog Bats</div>
+        <div class="stars">★★★★★</div>
+        <a class="btn">BUY NOW – $200</a>
     </div>
 
-    <div class="grid-item">
-      <img src="https://via.placeholder.com/250x300?text=Cricket+Kit" />
-      <h2>Cricket</h2>
+    <div class="card">
+        <img src="https://i.imgur.com/Jk4wEqd.png" alt="Tennis Balls">
+        <div class="title">Best Tennis Ball</div>
+        <div class="stars">★★★★★</div>
+        <a class="btn">BUY NOW – $5</a>
     </div>
 
-    <div class="grid-item">
-      <img src="https://via.placeholder.com/250x300?text=Volleyball+Kit" />
-      <h2>Volleyball</h2>
+    <div class="card">
+        <img src="https://i.imgur.com/8iC3luf.png" alt="Football">
+        <div class="title">Hand Stitched Football</div>
+        <div class="stars">★★★★★</div>
+        <a class="btn">BUY NOW – $50</a>
     </div>
 
-    <div class="grid-item">
-      <img src="https://via.placeholder.com/250x300?text=Football+Kit" />
-      <h2>Football</h2>
+    <div class="card">
+        <img src="https://i.imgur.com/7UvLGLm.png" alt="Sports Track Suit">
+        <div class="title">Sports Track Suit</div>
+        <div class="stars">★★★★★</div>
+        <a class="btn">BUY NOW – $150</a>
     </div>
 
-    <div class="grid-item">
-      <img src="https://via.placeholder.com/250x300?text=Badminton+Kit" />
-      <h2>Badminton</h2>
-    </div>
-
-    <div class="grid-item">
-      <img src="https://via.placeholder.com/250x300?text=Swimming+Gear" />
-      <h2>Swimming</h2>
-    </div>
-
-    <div class="grid-item">
-      <img src="https://via.placeholder.com/250x300?text=Tennis+Kit" />
-      <h2>Tennis</h2>
-    </div>
-
-    <div class="grid-item">
-      <img src="https://via.placeholder.com/250x300?text=Hockey+Kit" />
-      <h2>Hockey</h2>
-    </div>
   </div>
+  
 
   <!-- FOOTER -->
   <div class="footer">
