@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us - Sport Station</title>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+        font-family: Arial, sans-serif;
+    }
+
+    /* HEADER */
+    .header {
+    background: #100602;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 1px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 20px;
+  }
+.nav a:hover{
+  text-decoration: underline;
+}
+  /* RIGHT SIDE */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* SEARCH BAR WITH RIGHT ICON */
+  .search-wrapper {
+    position: relative;
+  }
+
+  .search-bar {
+    padding: 7px 12px;
+    padding-right: 32px;
+    border-radius: 6px;
+    border: none;
+    width: 260px;
+    font-size: 14px;
+  }
+  .search-icon{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 15px;
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+    /* MAIN CONTENT */
+    h2 {
+        text-align: center;
+        margin: 30px 0 10px;
+        font-size: 28px;
+    }
+
+    .about-container {
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+        font-size: 19px;
+        line-height: 32px;
+    }
+
+    .team-section {
+        margin-top: 40px;
+    }
+
+    .team-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .team-images {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .team-box {
+        width: 45%;
+        max-width: 380px;
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* FIXED IMAGE SIZE */
+    .team-box img {
+        width: 100%;
+        height: 250px;       /* FIXED equal height */
+        object-fit: cover;   /* makes them same size & cropped nicely */
+        border-radius: 10px;
+    }
+
+    .team-text {
+        font-size: 16px;
+        margin-top: 10px;
+        color: #444;
+    }
+
+    /* FOOTER */
+    .footer {
+    width: 100%;
+    background: black;
+    color: white;
+    margin-top: 40px;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-icons {
+    margin-top: 10px;
+  }
+
+  .footer-icons img {
+    width: 28px;
+    margin: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <img src="./images/logo.png" alt="Sport Station Logo" />
+        Sport Station
+      </div>
+
+      <nav class="nav">
+         <a href="./1st.html" style="text-decoration: none">Home</a>
+         <a href="./3rd.html" style="text-decoration: none" class="categories-link">Categories</a>
+       <a href="./4th.html" style="text-decoration:none;" class="top-sales-link">Top Sales</a>
+      <a href="./9th.html" style="text-decoration:none;">Recommendation</a>
+          
+    </nav>
+    </div>
+
+    <div class="header-right">
+
+      <!-- Search bar -->
+      <div class="search-wrapper">
+        <input type="text" class="search-bar" placeholder="Search..." />
+        <i class="fa fa-search search-icon"></i>
+      </div>
+
+      <div class="header-icons">
+         <span><a href="./5th.html" style="text-decoration:none">🛒</a></span>
+        <span><a href="./2nd.html" style="text-decoration:none">👤</a></span>
+        <span>☰</span>
+      </div>
+
+    </div>
+  </header>
+
+<!-- MAIN CONTENT -->
+<h2>ABOUT US</h2>
+
+<div class="about-container">
+
+   <p>
+    Welcome to Sport Station — your trusted destination for premium sports gear, accessories, 
+    and activewear. For years, we have dedicated ourselves to providing athletes, fitness 
+    enthusiasts, and beginners with high-quality products to support every step of their journey. 
+    At Sport Station, we believe that the right equipment can inspire confidence, enhance 
+    performance, and make every training session more enjoyable.
+    <br><br>
+    Our mission goes beyond selling sports products — we aim to build a community that values 
+    strength, dedication, and healthy lifestyles. From professional-grade equipment to stylish 
+    activewear, every item in our store is carefully selected to meet quality standards and 
+    customer expectations. We partner with trusted brands, ensure secure shopping, and provide 
+    fast delivery to your doorstep.
+    <br><br>
+    Whether you're gearing up for a competition, building a home gym, or simply staying active, 
+    Sport Station is here to support your goals with reliable products and exceptional customer 
+    service. Your journey matters to us — and we’re committed to helping you perform at your best.
+</p>
+
+    <div class="team-section">
+        <div class="team-title">🏢 Our Company Team</div>
+
+        <div class="team-images">
+
+            <div class="team-box">
+                <img src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15779.jpg?w=996"
+                     alt="Sport Station Team">
+                <div class="team-text">
+                    Our Sport Station team works hard to maintain product quality and provide 
+                    a great customer experience.
+                </div>
+            </div>
+
+            <div class="team-box">
+                <img src="https://img.freepik.com/free-photo/portrait-smiley-workers-standing-storage-room_23-2149068524.jpg?w=996"
+                     alt="Warehouse Team">
+                <div class="team-text">
+                    Our warehouse team ensures fast deliveries, secure packaging, and smooth 
+                    logistics operations every day.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-section">
+      <div>ABOUT US</div>
+    </div>
+
+    <div class="footer-section">
+   <div><a href="./6th.html" style="text-decoration: none;">CHECKOUT</a></div>
+    </div>
+
+    <div class="footer-section">
+      <a href="./7th.html" style="text-decoration: none;">CONNECT WITH US</a>
+
+      <div class="footer-icons">
+        <img src="https://img.icons8.com/fluency/48/whatsapp.png">
+        <img src="https://img.icons8.com/fluency/48/instagram-new.png">
+        <img src="https://img.icons8.com/fluency/48/gmail.png">
+      </div>
+    </div>
+
+</body>
+</html>
