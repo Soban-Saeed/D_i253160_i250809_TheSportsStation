@@ -12,10 +12,12 @@
   * {
     box-sizing: border-box;
   }
+
   body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #fff;
+    color: #000;
   }
 
   /* HEADER */
@@ -35,11 +37,12 @@
   }
 
   .logo {
-    font-weight: bold;
-    font-size: 22px;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
     letter-spacing: 1px;
   }
 
@@ -54,9 +57,11 @@
     font-size: 15px;
     margin-right: 20px;
   }
-.nav a:hover{
-  text-decoration: underline;
-}
+
+  .nav a:hover {
+    text-decoration: underline;
+  }
+
   /* RIGHT SIDE */
   .header-right {
     display: flex;
@@ -64,14 +69,14 @@
     gap: 20px;
   }
 
-  /* SEARCH BAR WITH RIGHT ICON */
+  /* SEARCH BAR */
   .search-wrapper {
     position: relative;
   }
 
   .search-bar {
     padding: 7px 12px;
-    padding-right: 32px;
+    padding-right: 35px;
     border-radius: 6px;
     border: none;
     width: 260px;
@@ -80,24 +85,39 @@
 
   .search-icon {
     position: absolute;
-    right: 8px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: gray;
     font-size: 15px;
   }
 
-  .header-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  /* HEADER ICONS */
+  .header-icons span {
+    font-size: 20px;
+    cursor: pointer;
   }
 
   /* CART SECTION */
   .cart-container {
-    max-width: 600px;
-    margin: 50px auto 80px;
+    max-width: 1100px;
+    margin: 50px auto;
     padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+    /* ✔ MATCH HEIGHT OF BOTH SECTIONS */
+    align-items: stretch;
+  }
+
+  .cart-items {
+    width: 360px; /* ✔ SAME WIDTH AS ORDER SUMMARY */
+
+    /* ✔ MAKE HEIGHT MATCH ORDER SUMMARY */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .cart-title {
@@ -130,10 +150,6 @@
     font-size: 18px;
   }
 
-  .item-details span.price {
-    margin-left: 10px;
-  }
-
   .quantity-controls {
     display: flex;
     align-items: center;
@@ -149,22 +165,68 @@
     cursor: pointer;
   }
 
-  .shipping-total {
-    margin-top: 25px;
-    font-size: 16px;
-    text-align: right;
+  /* ORDER SUMMARY BEAUTIFUL BOX */
+  .order-summary {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 360px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border-top: 6px solid yellow;
+    transition: 0.3s ease;
   }
 
-  .checkout-btn {
-    display: block;
-    margin: 40px auto 0;
-    padding: 12px 40px;
-    background: #ccc;
+  .order-summary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .order-summary h2 {
+    margin-top: 0;
+    font-size: 24px;
     font-weight: bold;
+    letter-spacing: 1px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eaeaea;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
     font-size: 17px;
+    color: #333;
+  }
+
+  .summary-row:not(:last-child) {
+    border-bottom: 1px dashed #d8d8d8;
+  }
+
+  .summary-total {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 18px;
+    border-top: 2px solid #cfcfcf;
+  }
+
+  .place-order-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: black;
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: 0.25s ease;
+  }
+
+  .place-order-btn:hover {
+    background: yellow;
+    color: black;
   }
 
   /* FOOTER */
@@ -172,26 +234,28 @@
     width: 100%;
     background: black;
     color: white;
-    margin-top: 40px;
-    padding: 35px 0;
+    margin-top: 60px;
+    padding: 30px 0;
     display: flex;
     justify-content: space-around;
     text-align: center;
   }
 
-  .footer-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .footer div {
+    font-size: 16px;
+    font-weight: bold;
   }
 
   .footer-icons {
+    display: flex;
+    flex-direction: row;
     margin-top: 10px;
+    margin-left:15px;
+    gap: 10px;
   }
 
   .footer-icons img {
     width: 28px;
-    margin: 5px;
     cursor: pointer;
   }
 
@@ -200,94 +264,111 @@
 
 <body>
 
-  <header class="header">
-    <div class="header-left">
-      <div class="logo">
-        <img src="./images/logo.png" alt="Sport Station Logo" />
-        Sport Station
-      </div>
-
-      <nav class="nav">
-         <li><a href="./1st.html" style="text-decoration: none;">Home</a></li>
-        <a href="./3rd.html" style="text-decoration: none" class="categories-link">Categories</a>
-        <a href="./4th.html" style="text-decoration:none;" class="top-sales-link">Top Sales</a>
-        <a href="./9th.html" style="text-decoration:none;">Recommendation</a>
-      </nav>
+<header class="header">
+  <div class="header-left">
+    <div class="logo">
+      <img src="./images/logo.png" alt="Sport Station Logo" />
+      SPORT STATION
     </div>
 
-    <div class="header-right">
+    <nav class="nav">
+       <a href="./1st.html" style="text-decoration: none;">Home</a>
+       <a href="./3rd.html" style="text-decoration: none" class="categories-link">Categories</a>
+      <a href="./4th.html" style="text-decoration:none;" class="top-sales-link">Top Sales</a>
+       <a href="./9th.html" style="text-decoration:none;">Recommendation</a>
+    </nav>
+  </div>
 
-      <!-- Search bar -->
-      <div class="search-wrapper">
-        <input type="text" class="search-bar" placeholder="Search..." />
-        <i class="fa fa-search search-icon"></i>
-      </div>
-
-      <div class="header-icons">
-        <span style="color: yellow; font-size: 20px;">🛒</span>
-       <span><a href="./2nd.html" style="text-decoration:none">👤</a></span>
-        <span>☰</span>
-      </div>
-
+  <div class="header-right">
+    <div class="search-wrapper">
+      <input type="text" class="search-bar" placeholder="Search..." />
+      <i class="fa fa-search search-icon"></i>
     </div>
-  </header>
 
-  <main class="cart-container">
+    <div class="header-icons">
+     <span><a href="./5th.html" style="text-decoration:none">🛒</a></span>
+     <span><a href="./2nd.html" style="text-decoration:none">👤</a></span>
+      <span>☰</span>
+    </div>
+  </div>
+</header>
+
+<main class="cart-container">
+
+  <!-- LEFT SIDE CART ITEMS -->
+  <div class="cart-items">
     <div class="cart-title">Your Cart</div>
 
-    <div class="cart-item">
-      <img src="https://i.imgur.com/k06yGeS.png" alt="cricket bat" />
-      <div class="item-details">
-        cricket bat <span class="price">12.99$</span>
+    <div>
+      <div class="cart-item">
+        <img src="https://i.ibb.co/xq5mnzBZ/image-2025-12-01-211823551.png" alt="cricket bat" />
+        <div class="item-details">
+          cricket bat <span class="price">12.99$</span>
+        </div>
+        <div class="quantity-controls">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
       </div>
-      <div class="quantity-controls">
-        <button>-</button>
-        <span>1</span>
-        <button>+</button>
+
+      <div class="cart-item">
+        <img src="https://i.ibb.co/sJ9mTFNP/image-2025-12-01-212016115.png" alt="Adidas football" />
+        <div class="item-details">
+          Adidas football <span class="price">15.99$</span>
+        </div>
+        <div class="quantity-controls">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="cart-item">
-      <img src="https://i.imgur.com/8iC3luf.png" alt="Adidas football" />
-      <div class="item-details">
-        Adidas football <span class="price">15.99$</span>
-      </div>
-      <div class="quantity-controls">
-        <button>-</button>
-        <span>1</span>
-        <button>+</button>
-      </div>
+  <!-- RIGHT SIDE ORDER SUMMARY -->
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+
+    <div class="summary-row">
+      <span>Item Subtotal</span>
+      <span>$100</span>
     </div>
 
-    <div class="shipping-total">
-      Total shipping = <strong>28.99$</strong>
+    <div class="summary-row">
+      <span>Shipping Fee</span>
+      <span>$10</span>
     </div>
 
-    <button class="checkout-btn">Go for Checkout</button>
-  </main>
-
-  <footer class="footer">
-
-    <div class="footer-section">
-      <div><a href="./8th.html" style="text-decoration: none;">ABOUT US</a></div>
-    </div>
-    <div class="footer-section">
-    <div><a href="./6th.html" style="text-decoration: none;">CHECKOUT</a></div>
+    <div class="summary-row">
+      <span>Tax</span>
+      <span>$8</span>
     </div>
 
-    <div class="footer-section">
+    <div class="summary-row summary-total">
+      <span>Total</span>
+      <span>$118</span>
+    </div>
+
+    <button class="place-order-btn">Place Order</button>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<div class="footer">
+<div><a href="./8th.html" style="text-decoration: none;">ABOUT US</a></div>
+  <div class="checkout-footer">CHECKOUT</div>
+
+  <div>
     <a href="./7th.html" style="text-decoration: none;">CONNECT WITH US</a>
-
-      <div class="footer-icons">
-        <img src="https://img.icons8.com/fluency/48/whatsapp.png">
-        <img src="https://img.icons8.com/fluency/48/instagram-new.png">
-        <img src="https://img.icons8.com/fluency/48/gmail.png">
-      </div>
+    <div class="footer-icons">
+      <img src="https://img.icons8.com/fluency/48/whatsapp.png">
+      <img src="https://img.icons8.com/fluency/48/instagram-new.png">
+      <img src="https://img.icons8.com/fluency/48/gmail.png">
     </div>
-
-
-    
-  </footer>
+  </div>
+</div>
 
 </body>
 </html>
