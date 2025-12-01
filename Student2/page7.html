@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us - Sport Station</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+        font-family: Arial, sans-serif;
+    }
+/* HEADER */
+  .header {
+    background: #100602;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 1px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 20px;
+  }
+.nav a:hover{
+  text-decoration: underline;
+}
+  /* RIGHT SIDE */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* SEARCH BAR WITH RIGHT ICON */
+  .search-wrapper {
+    position: relative;
+  }
+
+  .search-bar {
+    padding: 7px 12px;
+    padding-right: 32px;
+    border-radius: 6px;
+    border: none;
+    width: 260px;
+    font-size: 14px;
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 15px;
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+    /* MAIN AREA */
+    h2 {
+        text-align: center;
+        margin-top: 25px;
+        font-size: 28px;
+    }
+
+    .contact-container {
+        width: 90%;
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 12px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1.5px solid #ccc;
+        font-size: 15px;
+    }
+
+    textarea {
+        height: 160px;
+        resize: none;
+    }
+
+    .submit-btn {
+        margin-top: 20px;
+        padding: 10px 30px;
+        background: black;
+        color: white;
+        border: none;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+        background: #333;
+    }
+
+    .faq {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+  .footer {
+    width: 100%;
+    background: black;
+    color: white;
+    margin-top: 40px;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-icons {
+    margin-top: 10px;
+  }
+
+  .footer-icons img {
+    width: 28px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <img src="./images/logo.png" alt="Sport Station Logo" />
+        Sport Station
+      </div>
+
+      <nav class="nav">
+        <a href="./1st.html" style="text-decoration: none;">Home</a>
+         <a href="./3rd.html" style="text-decoration: none" class="categories-link">Categories</a>
+        <a href="./4th.html" style="text-decoration:none;" class="top-sales-link">Top Sales</a>
+        <a href="./9th.html" style="text-decoration:none;">Recommendation</a>
+      </nav>
+    </div>
+
+    <div class="header-right">
+
+      <!-- Search bar -->
+      <div class="search-wrapper">
+        <input type="text" class="search-bar" placeholder="Search..." />
+        <i class="fa fa-search search-icon"></i>
+      </div>
+
+      <div class="header-icons">
+        <span><a href="./5th.html" style="text-decoration:none">🛒</a></span>
+        <span><a href="./2nd.html" style="text-decoration:none">👤</a></span>
+        <span>☰</span>
+      </div>
+
+    </div>
+  </header>
+
+<!-- CONTACT US MAIN CONTENT -->
+<h2>CONTACT US</h2>
+
+<div class="contact-container">
+
+    <div class="contact-title">📩 Send us a message</div>
+
+        <label>Your Name:</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Your Email:</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Subject:</label>
+        <input type="text" placeholder="Subject">
+
+        <label>Your Message:</label>
+        <textarea placeholder="Write your message here..."></textarea>
+
+        <button class="submit-btn">Submit</button>
+
+    <div class="faq">
+        <h3>❓ Frequently Asked Questions</h3>
+
+        <p><b>Q:</b> How do I reset my password?<br>
+        <b>A:</b> Go to Settings > Reset Password.</p>
+
+        <p><b>Q:</b> Where can I track my order?<br>
+        <b>A:</b> Visit your Account > Orders.</p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-section">
+      <div><a href="./8th.html" style="text-decoration: none;">ABOUT US</a></div>
+    </div>
+    <div class="footer-section">
+    <div><a href="./6th.html" style="text-decoration: none;">CHECKOUT</a></div>
+    </div>
+
+    <div class="footer-section">
+      <div>CONNECT WITH US</div>
+
+      <div class="footer-icons">
+        <img src="https://img.icons8.com/fluency/48/whatsapp.png">
+        <img src="https://img.icons8.com/fluency/48/instagram-new.png">
+        <img src="https://img.icons8.com/fluency/48/gmail.png">
+      </div>
+    </div>
+
+
+</body>
+</html>
